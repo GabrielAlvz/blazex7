@@ -5,6 +5,7 @@ on:
     branches:
       - main # Executa quando há mudanças no branch principal
 
+
 permissions:
   contents: write
   pages: write
