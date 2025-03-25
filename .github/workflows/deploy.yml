@@ -3,7 +3,8 @@ name: Deploy para GitHub Pages
 on:
   push:
     branches:
-      - main # Executa quando há mudanças no branch principal
+      - main
+
 
 permissions:
   contents: write
@@ -18,10 +19,12 @@ jobs:
     - name: Checkout do repositório
       uses: actions/checkout@v4
 
-    - name: Configurar o GitHub Pages
+
+    - name: Configurar GitHub Pages
       uses: actions/upload-pages-artifact@v3
       with:
-        path: ./build # Ajuste se seu diretório de saída for diferente, como 'dist' ou algo personalizado
+        path: .
+
 
     - name: Publicar no GitHub Pages
       uses: actions/deploy-pages@v4
